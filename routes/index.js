@@ -13,10 +13,10 @@ appRouter.get('/', (req, res) => {
   appRouter.get("/findLogs", findLogs);
 
   //create aka createLog
-  appRouter.post("/log/", createLog);
+  appRouter.post("/log", createLog);
 
   //create aka createUser
-  appRouter.post("/user/", createUser);
+  appRouter.post("/user", createUser);
 
   //put aka updateL
   appRouter.put("/updatelog/:id", updateL);
