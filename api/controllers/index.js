@@ -24,7 +24,8 @@ const createLog = async (req, res) => {
 //create user
 const createUser = async (req, res) => {
     try{
-        const newUser = await User.create(req.body);
+       const newUser = await User.create(req.body);
+        //console.log(newUser)
         res.status(200).json(newUser);
     } catch(error) {
         res.status(400).send(error);

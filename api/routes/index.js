@@ -10,19 +10,19 @@ appRouter.get('/', (req, res) => {
   ////////create routes////////
 
   //get aka findLogs
-  appRouter.get("/", findLogs);
+  appRouter.get("/findLogs", findLogs);
 
   //create aka createLog
-  appRouter.post("/", createLog);
+  appRouter.post("/log/", createLog);
 
   //create aka createUser
-  appRouter.post("/", createUser);
+  appRouter.post("/user/", createUser);
 
   //put aka updateL
-  appRouter.put("/:id", updateL);
+  appRouter.put("/updatelog/:id", updateL);
 
   //put aka updateU
-  appRouter.put("/:id", updateU);
+  appRouter.put("/updateuser/:id", updateU);
 
   //delete aka destroy
   appRouter.delete("/:id", destroy);
