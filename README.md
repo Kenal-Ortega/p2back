@@ -9,8 +9,8 @@
 |---|---| ---|
 |Day 1| Project Description | Complete
 |Day 1| Priority Matrix | Complete
-|Day 2| Working RestAPI | Incomplete
-|Day 3| MVP & Bug Fixes | Incomplete
+|Day 2| Working RestAPI | Complete
+|Day 3| MVP & Bug Fixes | Complete
 
 
 ## Project Description
