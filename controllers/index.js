@@ -11,6 +11,16 @@ const findLogs = async (req, res) => {
     }
 };
 
+//find all users
+const findUsers = async (req, res) => {
+    try{
+        const findUsers = await User.find({});
+        res.status(200).json(findUsers);
+    } catch(error) {
+        res.status(400).send(error);
+    }
+};
+
 //create logs
 const createLog = async (req, res) => {
     try{
@@ -64,6 +74,7 @@ const destroy = async (req, res) => {
 
 module.exports = {
     findLogs,
+    findUsers,
     createLog,
     createUser,
     updateL,

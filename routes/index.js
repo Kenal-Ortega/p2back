@@ -1,7 +1,7 @@
 const {Router} = require('express');
 
 const appRouter = Router();
-const {findLogs, createLog, createUser, updateL, updateU, destroy} = require("../controllers/index.js");
+const {findLogs, findUsers, createLog, createUser, updateL, updateU, destroy} = require("../controllers/index.js");
 
 appRouter.get('/', (req, res) => {
     res.send('This is the router')
@@ -11,6 +11,9 @@ appRouter.get('/', (req, res) => {
 
   //get aka findLogs
   appRouter.get("/findLogs", findLogs);
+
+  //get aka findUsers
+  appRouter.get("/findUsers", findUsers);
 
   //create aka createLog
   appRouter.post("/log", createLog);
