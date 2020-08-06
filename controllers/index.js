@@ -1,10 +1,14 @@
 const User = require('../models/user');
 const Logger = require('../models/logger');
+const mongoose = require("mongoose")
+const objectify = mongoose.Types.ObjectId
+
+
 
 //find all logs
 const findLogs = async (req, res) => {
     try{
-        const findLogs = await Logger.find({});
+        const findLogs = await Logger.find({}).populate("user");
         res.status(200).json(findLogs);
     } catch(error) {
         res.status(400).send(error);
@@ -24,6 +28,7 @@ const findUsers = async (req, res) => {
 //create logs
 const createLog = async (req, res) => {
     try{
+        req.body.user = objectify(req.body.user)
         const newLog = await Logger.create(req.body);
         res.status(200).json(newLog);
     } catch(error) {
@@ -72,7 +77,9 @@ const destroy = async (req, res) => {
     }
 }
 
+
 module.exports = {
+   
     findLogs,
     findUsers,
     createLog,

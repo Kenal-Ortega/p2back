@@ -4,12 +4,12 @@ const { Schema, model } = mongoose;
 const LoggerSchema = Schema({
     Date: String,
     Log: String,
-    user: [
+    user: 
         {
             type: Schema.Types.ObjectId,
             ref: 'user' 
         }
-    ]
+    
 });
 
 module.exports = mongoose.model("Log", LoggerSchema);
