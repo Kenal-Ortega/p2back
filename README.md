@@ -63,7 +63,7 @@ Create an api that allows you to create, repeat, update and delete.
 | Total | H | 6hrs| N/A | N/A |
 
 ## Additional Libraries
-Bootstrap 
+
 
 ## Code Snippet
 I was very proud to complete this Schema.
@@ -86,7 +86,12 @@ const LoggerSchema = Schema({
 module.exports = mongoose.model("Log", LoggerSchema);
 ```
 
+## Issues and Resolutions
 
-## Previous Project Worksheet
- - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
- - [Best of class readme](https://github.com/jkeohan/fewd-class-repo/blob/master/final-project-worksheet/project-worksheet-examples/portfolio-gracie.md)
+#### I had to require mongoose in order to display info from my Schema
+
+```
+const mongoose = require("mongoose")
+```
+
+
