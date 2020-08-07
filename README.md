@@ -1,6 +1,7 @@
 # Project 2 Backend
 
-# Project Overview
+## Test for Routes
+https://p2back93.herokuapp.com/
 
 
 ## Project Schedule
@@ -45,42 +46,52 @@ Create an api that allows you to create, repeat, update and delete.
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Pull data using api | H | 8hr | -hr | -hr|
-| Create user | H | 3hr | hr | -hr|
-| Log events | H | 3hr | hr | -hr|
-| Log job place | H | 1.5hr| -hr | -hr |
-| Update logs| H | 4hr | hr | -hr|
-| Delete logs | H | 3hrs| hr | -hr |
-| Deploy | H | 1hr | hr | -hr|
-| Total | H | 26.5hrs| -hrs | -hrs |
+| Pull data using api | H | 8hr | 8hr | 8hr|
+| Create user | H | 3hr | 1hr | 1hr|
+| Log events | H | 3hr | 1hr | 1hr|
+| Log job place | H | 1.5hr| 1hr | 1hr |
+| Update logs| H | 4hr | 1hr | 1hr|
+| Delete logs | H | 3hrs| 1hr | 1hr |
+| Deploy | H | 1hr | 1hr | 1hr|
+| Total | H | 26.5hrs| 14hrs | 14hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Accept pictures | L | 3hr | -hr | -hr|
-| Accept voice docs | L | 3hr | -hr | -hr|
-| Total | H | 6hrs| -hrs | -hrs |
+| Accept pictures | L | 3hr | N/A | N/A|
+| Accept voice docs | L | 3hr | N/A | N/A|
+| Total | H | 6hrs| N/A | N/A |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+I was very proud to complete this Schema.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const mongoose = require("mongoose");
+const { Schema, model } = mongoose;
+
+const LoggerSchema = Schema({
+    Date: String,
+    Log: String,
+    user: 
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'user' 
+        }
+    
+});
+
+module.exports = mongoose.model("Log", LoggerSchema);
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+#### I had to require mongoose in order to display info from my Schema
 
-## Previous Project Worksheet
- - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
- - [Best of class readme](https://github.com/jkeohan/fewd-class-repo/blob/master/final-project-worksheet/project-worksheet-examples/portfolio-gracie.md)
+```
+const mongoose = require("mongoose")
+```
+
+
